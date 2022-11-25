@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:worldwide_products/genres_list.dart';
-import 'package:worldwide_products/model/videogame.dart';
+import 'package:worldwide_products/model/videogames.dart';
 
 import './api/api_connection.dart';
 import 'package:worldwide_products/main.dart';
@@ -42,14 +42,11 @@ class GenresScreen extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Fetch Data Example',
+      title: 'Genres',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Genres'),
-        ),
         body: Center(
           child: FutureBuilder<Genre>(
             future: futureGenre,
