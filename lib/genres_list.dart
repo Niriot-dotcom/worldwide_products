@@ -13,7 +13,6 @@ class GenresList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Genres')),
         body: GridView(
           padding: const EdgeInsets.all(25),
 

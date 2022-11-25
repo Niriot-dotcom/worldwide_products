@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import './genres_screen.dart';
+import './videogame_screen.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => GenresScreen();
+class MyApp extends StatelessWidget {
+  Widget build(BuildContext context){
+    return MaterialApp(
+      title: 'Genres',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      initialRoute: '/',
+      routes: {
+        '/': (ctx) => GenresScreen(),
+        '/genre-videogames': (ctx) => VideoGameScreen(),
+      },
+    );
+  }
 }
