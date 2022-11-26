@@ -64,7 +64,10 @@ class GenreItem extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               name,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              style: const TextStyle(
+                  fontSize: 16,
+                  fontFamily: 'Varela',
+                  fontWeight: FontWeight.w600),
             ),
           ),
         ),

@@ -12,9 +12,32 @@ class GenresScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Videogames Genres'),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        toolbarHeight: 70,
+        title: Text('Videogames Genres'),
+        centerTitle: true,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20)),
+              gradient: LinearGradient(
+                  colors: [Colors.cyan, Colors.blue],
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter)),
+        ),
       ),
-      // backgroundColor: Color(0xFFF5F5F3),
+      // appBar: AppBar(
+      // backgroundColor: Color.fromARGB(255, 0, 255, 238),
+      // elevation: 0.0,
+      // centerTitle: true,
+      // title: Text('Videogames Genres',
+      //     style: TextStyle(
+      //         fontFamily: 'Varela',
+      //         fontSize: 20.0,
+      //         color: Color(0xFF545D68))),
+      // ),
       body: Center(
         child: FutureBuilder<Genre>(
           future: futureGenre,

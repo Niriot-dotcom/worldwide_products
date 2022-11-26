@@ -18,7 +18,23 @@ class VideoGameScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(genreName),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        toolbarHeight: 70,
+        title: Text(
+          genreName,
+        ),
+        centerTitle: true,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20)),
+              gradient: LinearGradient(
+                  colors: [Colors.cyan, Colors.blue],
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter)),
+        ),
       ),
       // backgroundColor: Color(0xFFF5F5F3),
       body: Center(
