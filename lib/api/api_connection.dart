@@ -10,8 +10,7 @@ const API_BASE = 'https://api.rawg.io/api';
 
 Future<Genre> fetchGenres() async {
   log(API_BASE + '/genres' + API_KEY);
-  final response = await http
-      .get(Uri.parse(API_BASE + '/genres' + API_KEY));
+  final response = await http.get(Uri.parse(API_BASE + '/genres' + API_KEY));
 
   if (response.statusCode == 200) {
     return Genre.fromJson(jsonDecode(response.body));
@@ -21,8 +20,18 @@ Future<Genre> fetchGenres() async {
 }
 
 Future<VideoGame> fetchVideogames(String id) async {
-  final response = await http
-      .get(Uri.parse(API_BASE + '/games' + API_KEY + '&genres=' + id + '&page_size=1000&exclude_additions=true&exclude_parents=true'));
+  log(API_BASE +
+      '/games' +
+      API_KEY +
+      '&genres=' +
+      id +
+      '&page_size=1000&exclude_additions=true&exclude_parents=true');
+  final response = await http.get(Uri.parse(API_BASE +
+      '/games' +
+      API_KEY +
+      '&genres=' +
+      id +
+      '&page_size=1000&exclude_additions=true&exclude_parents=true'));
 
   if (response.statusCode == 200) {
     return VideoGame.fromJson(jsonDecode(response.body));

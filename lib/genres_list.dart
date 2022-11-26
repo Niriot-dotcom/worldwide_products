@@ -14,18 +14,18 @@ class GenresList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: GridView(
-          padding: const EdgeInsets.all(25),
+      padding: const EdgeInsets.all(25),
 
-          //Scroll Down
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 200,
-              childAspectRatio: 3 / 2,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20),
-          children: genres
-              .map((genre) => GenreItem(genre.id!, genre.name!, genre.slug!))
-              .toList(),
-        ));
+      //Scroll Down
+      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 2.7 / 2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20),
+      children: genres
+          .map((genre) => GenreItem(
+              genre.id!, genre.name!, genre.slug!, genre.imageBackground!))
+          .toList(),
+    ));
   }
-
 }

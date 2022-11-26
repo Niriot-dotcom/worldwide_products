@@ -5,11 +5,11 @@ import './videogame_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Genres',
+      title: 'Videogames Genres',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
       initialRoute: '/',
       routes: {
