@@ -59,7 +59,7 @@ class GenreItem extends StatelessWidget {
               bottomLeft: Radius.circular(15),
             ),
           ),
-          height: 37,
+          height: 25,
           child: Align(
             alignment: Alignment.center,
             child: Text(

@@ -152,7 +152,7 @@ class VideoGameItem extends StatelessWidget {
           const SizedBox(height: 8.0),
           // Spacer(),
           Padding(
-              padding: const EdgeInsets.only(left: 75.0, right: 75.0),
+              padding: const EdgeInsets.only(left: 50.0, right: 50.0),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,

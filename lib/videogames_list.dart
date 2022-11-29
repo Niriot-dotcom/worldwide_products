@@ -19,7 +19,7 @@ class VideoGamesList extends StatelessWidget {
       padding: const EdgeInsets.all(25),
       //Scroll Down
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 400,
+          maxCrossAxisExtent: 200,
           childAspectRatio: 0.9,
           crossAxisSpacing: 20,
           mainAxisSpacing: 20),
